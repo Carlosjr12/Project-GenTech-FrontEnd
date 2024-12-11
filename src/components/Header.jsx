@@ -51,11 +51,12 @@ const Header = () => {
 
                 {/** Search */}
                 <div className='flex'>
-                    <InputText className='large-screen' placeholder="Pesquisar produto..." />
+                    <InputText className='large-screen col-12 ' placeholder="Pesquisar produto..." />
                     <Button
                         icon="pi pi-search"
                         className="p-button-rounded p-button-outlined small-screen"
                         onClick={handleIconClick}
+                        text 
                     />
                 </div>
 
@@ -70,15 +71,15 @@ const Header = () => {
 
                 {/** Cart icon */}
                 <div className='cart'>
-                    <img src={MiniCart} />
-                    <Badge value="4"></Badge>
+                    <img src={MiniCart} className='static'/>
+                    <Badge className='absolute top-0 mt-2 -ml-2'  value="2"></Badge>
                 </div>
             </div>
 
             {/**Input search */}
             {showInput && (
-                <div style={{ marginTop: '1rem' }} className='small-screen'>
-                    <InputText placeholder="Pesquisar produto..." />
+                <div style={{ marginTop: '1rem'}} className=' small-screen text-center'>
+                    <InputText placeholder="Pesquisar produto..." className='field col-12'/>
                 </div>
             )}
 
